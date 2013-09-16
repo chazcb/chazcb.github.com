@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>Landing page</head>
+    <head>First Popup</head>
     <body>
-        <a id="popup" href="#">Open first popup</a>
+        <a id="popup" href="#">Open second popup</a>
     </body>
     <script>
     var tag = document.getElementById("popup");
     tag.onclick = function (e) {
         //e.preventDefault();
-        window.open("/popup1.html", "_blank", "width=200,height=200");
+        window.open("/popup2.html", "_blank", "width=200,height=200");
         return false;
     };
     </script>
