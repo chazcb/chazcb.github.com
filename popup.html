@@ -6,10 +6,11 @@
         <a id="newWindow" href="#">Open first new page</a>
     </body>
     <script>
+    var ts = new Date().getTime();
     var popupLink = document.getElementById("popup");
     popupLink.onclick = function (e) {
         //e.preventDefault();
-        var popWindow = window.open("/popup1.html", "_blank", "width=200,height=200");
+        var popWindow = window.open("/popup1.html?" + ts, "_blank", "width=200,height=200");
         setTimeout(function () {
             popWindow.close()
         }, 15000);
@@ -17,7 +18,7 @@
     };
     var newWindowLink = document.getElementById("newWindow");
     newWindowLink.onclick = function (e) {
-        var newWindow = window.open("/popup1.html", "_blank");
+        var newWindow = window.open("/popup1.html?" + ts, "_blank");
         setTimeout(function () {
             newWindow.close()
         }, 15000);
