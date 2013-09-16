@@ -13,7 +13,7 @@
         var popWindow = window.open("/popup2.html?" + ts, "_blank", "width=200,height=200");
         setTimeout(function () {
             popWindow.close()
-        }, 15000);
+        }, 5000);
         return false;
     };
     var newWindowLink = document.getElementById("newWindow");
@@ -21,7 +21,7 @@
         var newWindow = window.open("/popup1.html?" + ts, "_blank");
         setTimeout(function () {
             newWindow.close()
-        }, 15000);
+        }, 5000);
         return false;
     }
     </script>
