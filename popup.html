@@ -3,13 +3,25 @@
     <head>Landing page</head>
     <body>
         <a id="popup" href="#">Open first popup</a>
+        <a id="newWindow" href="#">Open first new page</a>
     </body>
     <script>
-    var tag = document.getElementById("popup");
-    tag.onclick = function (e) {
+    var popupLink = document.getElementById("popup");
+    popupLink.onclick = function (e) {
         //e.preventDefault();
-        window.open("/popup1.html", "_blank", "width=200,height=200");
+        var popWindow = window.open("/popup1.html", "_blank", "width=200,height=200");
+        setTimeout(function () {
+            popWindow.close()
+        }, 15000);
         return false;
     };
+    var newWindowLink = document.getElementById("newWindow");
+    newWindowLink.onclick = function (e) {
+        var newWindow = window.open("/popup1.html", "_blank");
+        setTimeout(function () {
+            newWindow.close()
+        }, 15000);
+        return false;
+    }
     </script>
 </html>
