@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test IE popups for errors.</title>
+</head>
+<body>
+    <script>
+    window.popup = function () {
+        var win = window.open('', 'my_new_window');
+        win.location = 'http://yahoo.com/'
+    }
+    </script>
+    <a href="#" onclick="javascript:popup();">I'm inside a frame. Click here</a>
+</body>
+</html>
