@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test IE popups for errors.</title>
+</head>
+<body>
+    <script>
+    function isIframed(win) {
+        try {
+            // If window.self !== window.top then we're iFramed
+            if (win.self !== win.top)
+                return true;
+            else
+                return false;
+        } catch (e) {
+            console.log("Caught an error", e);
+            // If we got an error, it was a same origin policy error,
+            // which means we _are_ in an iFrame.
+            return true;
+        }
+    }
+    </script>
+    <h1>Parent Page:</h1>
+    <script>
+    if(isIframed(window)){
+        document.write(document.location + ' is inside an iFrame');
+    } else {
+        document.write(document.location + ' is frameless');
+        document.write('<br><iframe src="'+document.location+'"></iframe>');
+    }
+    </script>
+    <a href="#" target="_blank" onclick="window.open(document.location);return false;">Open blank</a>
+    <a href="#" onclick="window.open(document.location,'popper','width=200,height=200');return false;">Open popup</a>
+</body>
+</html>
