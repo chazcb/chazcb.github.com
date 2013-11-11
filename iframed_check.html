@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Test isIframed</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <style type="text/css">
     .frame {
         width: 60%;
@@ -30,13 +31,11 @@
             return true;
         }
     }
-    </script>
-    <script>
-    var onDomReady = function () {
-        var main = document.getElementById('main');
+    $(function () {
+
         var location = document.location + '';
         var template = [
-            "<h4>Parent: " + location + "</h4>",
+            "<h4>Location: " + location + "</h4>",
             '<a href="#" target="_blank" onclick="window.open(document.location);return false;">Open in blank</a>',
             '<a href="#" onclick="window.open(document.location,\'popper\',\'width=200,height=200\');return false;">Open in popup</a>'
         ];
@@ -46,9 +45,10 @@
         } else {
             template.push('<h1>frameless</h1>');
         }
-        main.innerHTML = template.join('');
-    };
-    setTimeout(onDomReady, 100); // Defer the function so all browsers are happy. Poor man's document.ready
+
+        $("#main").html(template.join(""));
+
+    });
     </script>
     <div id="main">Replace Me</div>
 </body>
