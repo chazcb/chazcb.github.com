@@ -2,6 +2,17 @@
 <html>
 <head>
     <title>Test IE popups for errors.</title>
+    <style type="text/css">
+    .frame {
+        width: 60%;
+        padding: 30px;
+        border: thin solid gray;
+        margin: 20px;
+    }
+    .frame iframe {
+        width: 100%;
+    }
+    </style>
 </head>
 <body>
     <script>
@@ -13,22 +24,30 @@
             else
                 return false;
         } catch (e) {
-            console.log("Caught an error", e);
+            alert("Caught an error: " + e);
             // If we got an error, it was a same origin policy error,
             // which means we _are_ in an iFrame.
             return true;
         }
     }
     </script>
-    <h1>Parent Page:</h1>
     <script>
     if(isIframed(window)){
+
         document.write(document.location + ' is inside an iFrame');
+
     } else {
         document.write(document.location + ' is frameless');
-        document.write('<br><iframe src="'+document.location+'"></iframe>');
+
+        document.write('<div class="frame"><h3>Opening current window in iFrame with HTTP</h3>');
+        document.write('<iframe src="' + (document.location + '').replace(/https?:/, 'http:') + '"></iframe></div>');
+
+        document.write('<div class="frame"><h3>Opening current window in iFrame with HTTPS</h3>');
+        document.write('<iframe src="' + (document.location + '').replace(/https?:/, 'https:') + '"></iframe></div>');
+
     }
     </script>
+    <br>
     <a href="#" target="_blank" onclick="window.open(document.location);return false;">Open blank</a>
     <a href="#" onclick="window.open(document.location,'popper','width=200,height=200');return false;">Open popup</a>
 </body>
