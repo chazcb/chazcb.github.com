@@ -35,26 +35,14 @@
         var main = document.getElementById('main');
         var location = document.location + '';
         var template = [
-            "<h4>Parent: " + location + "</h4>",
-            '<a href="#" target="_blank" onclick="window.open(document.location);return false;">Open parent in blank</a>',
-            '<a href="#" onclick="window.open(document.location,\'popper\',\'width=200,height=200\');return false;">Open parent in popup</a>'
+            "<h4> Child: " + location + "</h4>",
+            '<a href="#" target="_blank" onclick="window.open(document.location);return false;">Open child in blank</a>',
+            '<a href="#" onclick="window.open(document.location,\'popper\',\'width=200,height=200\');return false;">Open child in popup</a>'
         ];
-
-        var bust = new Date().getTime();
-        var child = (document.location + '').replace('/iframed_check.html', '/iframed_check_child.html?' + bust);
-
         if(isIframed(window)){
             template.push('<h1>iframed</h1>');
         } else {
             template.push('<h1>frameless</h1>');
-
-            var httpSrc = child.replace(/^https?:/, 'http:');
-            template.push('<div class="frame"><h3>Opening child at ' + httpSrc + '</h3>');
-            template.push('<iframe src="' + httpSrc + '"></iframe></div>');
-
-            var httpsSrc = child.replace(/^https?:/, 'https:');
-            template.push('<div class="frame"><h3>Opening child at ' + httpsSrc + '</h3>');
-            template.push('<iframe src="' + httpsSrc + '"></iframe></div>');
         }
         main.innerHTML = template.join('');
     };
