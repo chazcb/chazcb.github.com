@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Absolute widths</title>
+        <style type="text/css">
+        .container {
+            width: 300px;
+            background: red;
+            color: white;
+        }
+        .absolute-positioned {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: blue;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Container has width of 300px</h1>
+            <div class="absolute-positioned"><strong>This div has a width of 100%, and is inside a container with a width of 300px, but this is positioned absolutely</strong></div>
+        </div>
+    </body>
+</html>
