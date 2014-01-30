@@ -1,7 +1,46 @@
-// scrap book for the bookmarklets page
+/* global DISQUS, console */
+
+
+/**
+ * Scrap book for the bookmarklets page.
+ *
+ * Should contain all the uncompressed bookmarklet scripts and
+ * any code used to generate fixtures for the bookmarklets.
+ *
+ * To create a bookmarklet, first compress your script using a minifier like YUI,
+ * then head to one of the many bookmarklet generators on the internets. For instance:
+ * 1) http://refresh-sf.com/yui/
+ * 2) http://mrcoles.com/bookmarklet/
+ *
+ * TODO: would be nice to have a handlebars helper or something that
+ * would automatigically generate the bookmarklet from scripts.
+ */
+
+
+// ------- Set experiment cookie:
+(function (win, doc) {
+    'use strict';
+    var errorMessage = 'Run this script from a disqus domain.';
+    if (doc.domain.indexOf('disqus') === -1) {
+        win.alert(errorMessage);
+        throw errorMessage;
+    }
+    var experiment = win.prompt('What experiment do you want to run? Enter the name here:'),
+    expires = (new Date().getTime()) + (1000 * 60 * 60 * 24 * 7);
+    doc.cookie = [
+        'experiment=',
+        experiment,
+        '; expires="',
+        new Date(expires),
+        '"; path=/; domain=.',
+        doc.domain.split('.').slice(-2).join('.')
+    ].join('');
+})(window, document);
+
+// ------- Set hash for a particular percent:
 (function (doc, win) {
     'use strict';
-    var errorMessage = 'Please use this script from disqus.com domain',
+    var errorMessage = 'Run this script from a disqus domain.',
     HASHES = {
         0: '',
         1: 'e',
@@ -104,39 +143,28 @@
         98: 'b',
         99: 'c'
     },
-    expires = (new Date().getTime()) + (1000 * 60 * 60 * 24 * 7),
-    percent = win.prompt('What percent do you want to be in?'),
-    hash = HASHES[percent];
-    if (doc.domain !== 'disqus.com') {
+    expires = (new Date().getTime()) + (1000 * 60 * 60 * 24 * 7);
+    if (doc.domain.indexOf('disqus') === -1) {
         win.alert(errorMessage);
         throw errorMessage;
     }
+    var percent = win.prompt('What percent do you want to be in?'),
+    hash = HASHES[percent];
     win.console.log(percent, hash);
     doc.cookie = [
         'disqus_unique=',
         hash,
         '; expires="',
         new Date(expires),
-        '"; path=/; domain=.disqus.com'
+        '"; path=/; domain=.',
+        doc.domain.split('.').slice(-2).join('.')
     ].join('');
 })(document, window);
 
 
-(function () {
-    var percent;
-    for (var key in HASHES) {
-        percent = Math.abs(DISQUS.next.experiment.getHashCode(HASHES[key])) % 100;
-        if (key != percent)
-            throw key + '!=' + percent;
-    }
+// ----- worksheets for bookmarklets below
 
-    for (var i=0; i < 100; i++) {
-        if (!(i in HASHES))
-            throw 'Missing' + i
-    }
-})();
-
-// Reverse hash finder below =)
+// Reverse hash finder:
 (function () {
     'use strict';
     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -145,14 +173,14 @@
     var hashes = {};
     var hashesFound = 0;
 
-    var perm = function(set) {
+    var perm = function (set) {
         var results = (function acc(xs, set) {
             var x = xs[0];
             if (!x) {
                 return set;
             }
 
-            for(var i = 0, l = set.length; i < l; ++i) {
+            for (var i = 0, l = set.length; i < l; ++i) {
                 set.push(set[i].concat(x));
             }
 
@@ -184,4 +212,4 @@
     }
 
     return hashes;
-})(window);
+})();
