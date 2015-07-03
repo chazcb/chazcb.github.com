@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disqus</title>
+</head>
+<body>
+
+    <section>
+        <h1>iFrame w/ Title Attribute added by Javascript (Same Domain)</h1>
+        <div id="thread"></div>
+        <script>
+            (function (d) {
+
+                function addEventListener(el, name, listener) {
+                    if (el.addEventListener) {
+                        el.addEventListener(name, listener, false);
+                    } else if (el.attachEvent) {
+                        el.attachEvent('on' + name, listener);
+                    } else {
+                        throw new Error('No event support.');
+                    }
+                }
+
+                var thread = d.getElementById('thread');
+                var elem = d.createElement('iframe');
+
+                elem.setAttribute('id', 'dsq-2');
+                elem.setAttribute('data-disqus-uid', '1234565');
+                elem.setAttribute('allowTransparency', 'true');
+                elem.setAttribute('frameBorder', '0');
+
+                elem.setAttribute('style', 'width: 100% !important; border: none !important; overflow: hidden !important; height: 569px !important;')
+
+                elem.setAttribute('tabindex', 0);
+                elem.setAttribute('title', 'Disqus');
+
+                // elem.setAttribute('height', '300');
+                elem.setAttribute('src', 'http://disqus.com/embed/comments/?base=default&disqus_version=6c05c0ca&f=funatdisqus&t_i=&t_u=http%3A%2F%2Fdisqus.com%2Fpages%2Fdashboard%2F&t_s=fun_at_disqus_disqussions_vol_139&t_e&t_d=Disqus&t_t=Disqus&s_o=desc#2');
+                elem.setAttribute('width', '100%');
+
+                addEventListener(elem, 'load', function () {
+                    console.log('Yo yo');
+                });
+
+                thread.appendChild(elem);
+            })(document);
+        </script>
+    </section>
+</body>
+</html>
