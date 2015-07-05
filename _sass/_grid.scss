@@ -1,0 +1,14 @@
+/* -- CSS Grid -- */
+@import "mixins";
+
+.row {
+    @include clearfix;
+    width: 93%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Constraint containers */
+@media (min-width: 500px) {
+    .row { width: 87% }
+}
