@@ -1,47 +1,63 @@
 ---
 layout: slides
+theme: 'white'
 ---
 
 # Hi, I'm Charles
 
+----
+
 # I engineer software
+
+----
 
 # And develop teams and people
 
------
+----
 
-## *I believe in these people things*
+## I believe in
+[Servant Leadership](servant.html)
 
-- Servant leadership,
-- Cultural diversity,
-- Better hiring processes,
-- Training and mentorship;
+[Cultural Diversity](culture.html)
 
------
+[Introspective Hiring](hiring.html)
 
-### *and these technical things.*
-- Coherent code,
-- Tested code,
-- Front-end frameworks,
-- RESTful APIs,
-- Service Oriented Architecture,
+[Training and Mentorship](mentorship.html)
 
------
+----
 
-#### *Some stuff I use a lot*
-- JavaScript
-- Python
-- Backbone.js / Marionette / Handlebars, etc.
-- Django
+## and I believe in
+[Coherent Code](kiss.html)
 
------
+[Tested Code](testing.html)
 
-#### *and some other stuff I have experience with.*
-- CoffeeScript
-- Groovy
-- Git
-- Continuous deployment
-- The Web
-- Architecting for scale with SQL || flat stores like C\*
-- `{React|Angular|Meteor|Ember}.js`
+[SOA](soa.html)
 
+[RESTful APIs](rest.html)
+
+----
+
+### *Some stuff I use a lot*
+JavaScript
+
+Python
+
+Backbone.js etc.
+
+Django
+
+----
+
+### *and some other stuff*
+CoffeeScript,
+Groovy,
+Git,
+Continuous deployment,
+The Web,
+Architecting for scale with SQL || flat stores like C\*,
+`{React|Angular|Meteor|Ember}.js`.
+
+----
+
+### [@chazcb](https://twitter.com/chazcb)
+### [LinkedIn](https://linkedin.com/in/chazcb)

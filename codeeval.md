@@ -4,7 +4,7 @@ layout: slides
 
 # Code Eval Snippets
 
----
+----
 
 ## Fib
 ```javascript
@@ -28,7 +28,7 @@ layout: slides
 })();
 ```
 
----
+----
 
 ## Fizzbuzz
 
@@ -79,7 +79,7 @@ layout: slides
 })();
 ```
 
----
+----
 
 ## Lower
 
@@ -95,7 +95,7 @@ layout: slides
     });
 })();
 ```
----
+----
 
 ## Reverse Words
 
@@ -115,7 +115,7 @@ layout: slides
     });
 })();
 ```
----
+----
 
 ## Sum Primes
 ```js

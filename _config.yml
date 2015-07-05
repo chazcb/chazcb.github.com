@@ -11,6 +11,13 @@ redcarpet:
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 
+defaults:
+    -
+        scope:
+            path: ''
+        values:
+            theme: 'moon'
+
 title: "@chazcb"
 tagline: Charles Covey-Brandt
 author:
