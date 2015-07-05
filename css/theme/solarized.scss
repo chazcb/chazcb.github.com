@@ -1,3 +1,5 @@
+---
+---
 /**
  * Solarized Light theme for reveal.js.
  * Author: Achim Staebler
@@ -5,8 +7,8 @@
 
 
 // Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
+@import "template/mixins";
+@import "template/settings";
 // ---------------------------------------------
 
 
@@ -42,7 +44,7 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
-// Override theme settings (see ../template/settings.scss)
+// Override theme settings (see template/settings.scss)
 $mainColor: $base00;
 $headingColor: $base01;
 $headingTextShadow: none;
@@ -59,5 +61,5 @@ $selectionBackgroundColor: $magenta;
 
 
 // Theme template ------------------------------
-@import "../template/theme";
+@import "template/theme";
 // ---------------------------------------------
