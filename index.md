@@ -5,15 +5,12 @@ theme: 'white'
 
 # Hi, I'm Charles
 
-----
 
 # I engineer software
 
-----
 
 # And develop teams and people
 
-----
 
 ## I believe in
 [Servant Leadership](servant.html)
@@ -24,7 +21,6 @@ theme: 'white'
 
 [Training and Mentorship](mentorship.html)
 
-----
 
 ## and I believe in
 [Coherent Code](kiss.html)
@@ -35,9 +31,8 @@ theme: 'white'
 
 [RESTful APIs](rest.html)
 
-----
 
-### *Some stuff I use a lot*
+## *Some stuff I use a lot*
 JavaScript
 
 Python
@@ -46,9 +41,8 @@ Backbone.js etc.
 
 Django
 
-----
 
-### *and some other stuff*
+## *and some other stuff*
 CoffeeScript,
 Groovy,
 Git,
@@ -57,7 +51,6 @@ The Web,
 Architecting for scale with SQL || flat stores like C\*,
 `{React|Angular|Meteor|Ember}.js`.
 
-----
 
-### [@chazcb](https://twitter.com/chazcb)
-### [LinkedIn](https://linkedin.com/in/chazcb)
+# [@chazcb](https://twitter.com/chazcb)
+# [LinkedIn](https://linkedin.com/in/chazcb)

@@ -8,9 +8,7 @@ Work to know what you want before you go looking
 
 for someone to deliver it.
 
-----
-
-### Also, we don't need
+# Also, we don't need
 
 # "another John or Dave"
 
