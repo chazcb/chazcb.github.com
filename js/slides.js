@@ -2,35 +2,44 @@
 (function () {
     'use strict';
 
-    // Convert H1 & H2 separated markdown output to slides and sub-slides for Reveal.js.
-    (function () {
-        var wrapper = document.getElementById('slides');
+    /**
+     * Convert <HR><HR> and <HR> element sequences to sections and subsections
+     */
+    (function (wrapper) {
 
-        // Loop through each of the elements in the
-        // wrapper and group them by the HR separater.
+        // Get all children of "slides" and filter for tag nodes:
         var children = Array.prototype.slice.call(wrapper.childNodes);
+        children = children.filter(function (el) { return Boolean(el.tagName); }, children);
 
         var fragment = document.createDocumentFragment();
-        var section = null;
-        var subsection = null;
+        var section = document.createElement('section');
+        var subsection = document.createElement('section');
+
+        // Start by attaching the first section and subsection.
+        section.appendChild(subsection);
+        fragment.appendChild(section);
 
         children.forEach(function (el, index) {
 
-            if (el.tagName === 'H1') {
-                // create a new top level slide and sub-section
-                // and attach to the wrapper.
-                section = document.createElement('section');
-                subsection = document.createElement('section');
-                section.appendChild(subsection);
-                fragment.appendChild(section);
-            } else if (el.tagName === 'H2') {
-                // just create a new section for the current
-                // slide
-                subsection = document.createElement('section')
-                section.appendChild(subsection);
-            }
+            var next = children[index + 1];
 
-            if (subsection)
+            if (el.tagName === 'HR') {
+
+                // If the next tag is also a horizontal rule, then
+                // we just create a fresh top-level section and continue
+                // on in the loop.
+                if (next && next.tagName === 'HR') {
+                    section = document.createElement('section');
+                    fragment.appendChild(section);
+
+                // Otherwise, we'll create a new subsection and add
+                // it to the current top level section.
+                } else {
+                    subsection = document.createElement('section');
+                    section.appendChild(subsection);
+                }
+
+            } else
                 subsection.appendChild(el);
         });
 
@@ -41,7 +50,8 @@
 
         // Append the slideshow fragment to the wrapper.
         wrapper.appendChild(fragment);
-    })();
+
+    })(document.getElementById('slides'));
 
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
@@ -57,10 +67,6 @@
 
         // Optional reveal.js plugins
         dependencies: [
-            // { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-            // { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            // { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            // { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
             { src: 'plugin/zoom-js/zoom.js', async: true },
             { src: 'plugin/notes/notes.js', async: true }
         ]
