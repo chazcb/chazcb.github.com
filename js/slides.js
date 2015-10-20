@@ -7,6 +7,18 @@
      */
     (function (wrapper) {
 
+        function createDownArrow() {
+            var paragraph = document.createElement('P');
+            paragraph.innerHTML = '&darr;';
+            return paragraph;
+        }
+
+        function createRightArrow() {
+            var paragraph = document.createElement('P');
+            paragraph.innerHTML = '&rdsh;';
+            return paragraph;
+        }
+
         // Get all children of "slides" and filter for tag nodes:
         var children = Array.prototype.slice.call(wrapper.childNodes);
         children = children.filter(function (el) { return Boolean(el.tagName); }, children);
@@ -22,6 +34,7 @@
         children.forEach(function (el, index) {
 
             var next = children[index + 1];
+            var prev = children[index - 1];
 
             if (el.tagName === 'HR') {
 
@@ -29,12 +42,18 @@
                 // we just create a fresh top-level section and continue
                 // on in the loop.
                 if (next && next.tagName === 'HR') {
+
+                    subsection.appendChild(createRightArrow());
                     section = document.createElement('section');
                     fragment.appendChild(section);
 
                 // Otherwise, we'll create a new subsection and add
                 // it to the current top level section.
                 } else {
+
+                    if (prev.tagName !== 'HR')
+                        subsection.appendChild(createDownArrow());
+
                     subsection = document.createElement('section');
                     section.appendChild(subsection);
                 }

@@ -31,45 +31,40 @@ I'm pretty darn decent at writing software in
 
 -------------
 
-## JavaScript
 *8 years experience*
-
+## JavaScript
 HTML5 + Node.js + pure JS, dat `prototype`, inheritance patterns, OO and event loops, jQuery, Underscore, Handlebars, JSX, Babel & Harmony
 
 &darr;
 
 ------------
 
-## Python
 *6 years experience*
-
+## Python
 Metaclass, ducktyping, generators / iterators / streams, debugging & pdb, testing w/ mock, exam, pytest, fixtures
 
 &darr;
 
 ------------
 
-## React.js
 *1 year experience*
-
+## React.js
 Large deployment replacing disparate Backbone applications using Babel, JSX; backing store currently in Backbone
 
 &darr;
 
 ------------
 
-## Django
 *3 years experience*
-
+## Django
 Standard patterns, class based views, Django REST Framework, ORM / SQL optimization patterns, authentication and authorization, middleware, scaling traps
 
 &darr;
 
 ------------
 
-## Backbone.js
 *6 years experience*
-
+## Backbone.js
 Standard patterns, Marionette, single model stores, VM and perceived speed optimizations, lazy load, session architectures
 
 &rdsh;
