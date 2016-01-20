@@ -27,13 +27,13 @@ do we do as front-end developers at Disqus
 
 -------
 
-> "Front end development ... is the practice of producing **HTML, CSS and JavaScript for a website** or web application so that a user can see and interact with them directly."
+> "Front end development, also known as client side development is the practice of producing HTML, CSS and JavaScript for a website or web application so that a user can see and interact with them directly."
 >
 > <small>In Wikipedia Jan. 2016, from Treehouse.com (2012)</small>
 
 ---------
 
-![What](http://i.giphy.com/xPQNQyIrqDX0c.gif)
+![Hmmm](http://i.giphy.com/MsWnkCVSXz73i.gif)
 
 -----------
 
@@ -175,34 +175,42 @@ _Writes code for backend and front-end applications_
 
 _Focus on JavaScript and Node.js|Python|Ruby|Scala|Java|etc._
 
+-------
 
-## Slashie Frontend Engineer
+## The "Slashie"
 
-_Any mix of those other three jobs_
+_Any mix of those other jobs_
 
 ![Slashie Award](https://i.ytimg.com/vi/24a9ty1m3ZU/maxresdefault.jpg)
 
 -----------
 -----------
 
-## What do we do as front-end developers here?
+### What do we do as front-end engineers here?
 
 _A day in the life at Disqus_
 
 -------
 
-Nic
+## Nic
 
 -------
 
-Gabe
+## Gabe
 
 -------
 
-Charles
+## Charles
 
 ----------
 ----------
+
+## Q & A
+
+
+![Thanks](http://gif-finder.com/wp-content/uploads/2015/11/Sloth-Laugh.gif)
+
+---------
 
 ## Q & A
 
@@ -210,7 +218,13 @@ _Nic + Gabe + Charles_
 
 ---------
 
-## What do front-end engineers _not_ do?
+## Q & A
 
-## What's a web spec and why are they important?
+What do front-end engineers _not_ do?
+
+---------
+
+## Q & A
+
+What's a web spec and why are they important?
 
