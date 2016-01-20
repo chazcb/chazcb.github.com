@@ -33,7 +33,7 @@ do we do as front-end developers at Disqus
 
 ---------
 
-![Hmmm](http://i.giphy.com/MsWnkCVSXz73i.gif)
+![Oprah Hmmm](http://i.giphy.com/MsWnkCVSXz73i.gif)
 
 -----------
 
@@ -78,13 +78,13 @@ var foo = function (baz) {
 
 they connect all these languages together for a browser
 
-![Connecting](http://i.giphy.com/C1nEwzSrlVW80.gif)
+![Welding chain links](http://i.giphy.com/C1nEwzSrlVW80.gif)
 
 --------
 
 and the result is an interactive website or web application
 
-![apple.com](http://i2.cdn.turner.com/money/dam/assets/150506112202-old-website-apple-1024x640.png)
+![Old apple.com homepage](http://i2.cdn.turner.com/money/dam/assets/150506112202-old-website-apple-1024x640.png)
 
 ----------
 -----------
@@ -181,7 +181,7 @@ _Focus on JavaScript and Node.js|Python|Ruby|Scala|Java|etc._
 
 _Any mix of those other jobs_
 
-![Slashie Award](https://i.ytimg.com/vi/24a9ty1m3ZU/maxresdefault.jpg)
+![Zoolander Slashie award](https://i.ytimg.com/vi/24a9ty1m3ZU/maxresdefault.jpg)
 
 -----------
 -----------
@@ -208,7 +208,7 @@ _A day in the life at Disqus_
 ## Q & A
 
 
-![Thanks](http://gif-finder.com/wp-content/uploads/2015/11/Sloth-Laugh.gif)
+![Sloth laughing](http://gif-finder.com/wp-content/uploads/2015/11/Sloth-Laugh.gif)
 
 ---------
 
